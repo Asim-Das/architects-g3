@@ -13,23 +13,26 @@ h2 {
     font-size: 40px;
 }
 
-.top-area {
+.top-area,
+.top-section {
     background-color: rgba(255, 144, 14, 0.1);
 }
 
 nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     padding: 0 50px;
 }
 
 ul {
     display: flex;
+    gap: 80px;
 }
 
 ul li {
     list-style: none;
-    padding-left: 20px;
+    margin-top: 30px;
 }
 
 ul li a {
@@ -154,7 +157,6 @@ ul li a {
 
 .sponsor-image a {
     filter: grayscale(100%);
-    padding-left: 50px;
 }
 
 footer {
@@ -164,4 +166,54 @@ footer {
     border-radius: 5px;
     text-align: center;
     color: #424242;
+}
+
+/* Styles of Media Quary */
+
+@media screen and (max-width:576px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+        padding: auto;
+    }
+
+    ul {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .top-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .our-features,
+    .features-album {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .fav-features,
+    .some-facts {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-image {
+        margin-top: 20px;
+    }
+
 }
